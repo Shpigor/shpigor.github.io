@@ -1,0 +1,17 @@
+---
+title: "About"
+date: 2021-05-24T23:40:15-07:00
+categories:
+- category
+- subcategory
+tags:
+- tag1
+- tag2
+keywords:
+- tech
+comments:       false
+showMeta:       false
+showActions:    false
+#thumbnailImage: //example.com/image.jpg
+---
+

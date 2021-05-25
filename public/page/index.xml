@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Igor Khanenko</title>
+    <link>https://khanenko.info/page/</link>
+    <description>Recent content in Pages on Igor Khanenko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 May 2021 23:40:15 -0700</lastBuildDate><atom:link href="https://khanenko.info/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://khanenko.info/page/about/</link>
+      <pubDate>Mon, 24 May 2021 23:40:15 -0700</pubDate>
+      
+      <guid>https://khanenko.info/page/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
