@@ -1,89 +1,156 @@
-# Hugo Future Imperfect
+# Tranquilpeak
 
-Future Imperfect is a responsive theme tailored for blogging. The name is no coincidence which is a port of [HTML5 UP's theme](http://html5up.net/future-imperfect). Some extra features have also been implemented to assist you.
+[![Twitter Follow](https://img.shields.io/twitter/follow/thibaudlepretre.svg?style=social&label=%40thibaudlepretre)](https://twitter.com/intent/follow?screen_name=thibaudlepretre)
 
-![Hugo Future Imperfect Screenshot](https://raw.githubusercontent.com/jpescador/hugo-future-imperfect/master/images/screenshot.png)
+A gorgeous responsive theme for Hugo blog framework.
 
-Check out this [site](https://jpescador.com) if you are interested in seeing a live example.
+![Tranquilpeak](https://raw.githubusercontent.com/kakawait/hugo-tranquilpeak-theme/master/showcase.png)
 
-## Getting Started
+## Alpha/Beta versions
 
-Run the following commands in your Hugo site directory:
+**ATTENTION** during *alpha* or *beta* [versions](https://github.com/kakawait/hugo-tranquilpeak-theme/milestones) breaking changes are possible on config file.
 
-    mkdir themes
-    cd themes
-    git clone https://github.com/jpescador/hugo-future-imperfect.git
+You can track [breaking changes label](https://github.com/kakawait/hugo-tranquilpeak-theme/issues?q=is%3Aissue+is%3Aopen+label%3A%22breaking+changes%22).
 
-A folder called hugo-future-imperfect will be created. Navigate to this folder.
+How can I migrate my current version? Please read [CHANGELOG.md](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/CHANGELOG.md).
 
-## exampleSite
+## Credits
 
-There will be a folder in this theme called exampleSite. The structure of the folder will look something this:
+*Hugo* version of Tranquilpeak is a based on original *Hexo* version https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak. This version is simply a port to *Hugo* static site generator.
 
-    exampleSite
-    ├── config.toml
-    ├── content
-        └── blog
-        │   ├── creating-a-new-theme.md
-        │   ├── goisforlovers.md
-        │   ├── hugoisforlovers.md
-        │   └── migrate-from-jekyll.md
-        └── about.md
-    ...
+Please all the credit should be attributed to [original *Hexo* version](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak) and its author [Louis Barranqueiro](https://github.com/LouisBarranqueiro).
 
-Copy the config file from exampleSite to the root directory of your Hugo site.
+*Hugo* version keeps every `.js` and `.css` files untouched from original *Hexo* version in order to enjoy future original *Hexo* version updates or features!
 
-## The Config File
+## Summary
 
-The file contains comments on the functionality for each param. Please see the file for more information.
+- [General](#general)
+- [Features](#features)
+- [Quick start](#quick-start)
+- [Demo](#demo)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Showcase](#showcase)
+- [License](#license)
 
-## Shortcodes
-The theme also contains the following [shortcodes](https://gohugo.io/extras/shortcodes/) that I hope you find useful: img-post, img-fit, and url-link.  
+## General
 
-### Image post
-img-post: allows the user to add an image which can be placed in the center, to the left, or the right. The commands are shown below:
+- **Authors**: [Louis Barranqueiro (LouisBarranqueiro)](https://github.com/LouisBarranqueiro) and [Thibaud Leprêtre (kakawait)](https://github.com/kakawait)
+- **Version**: 0.4.8-BETA (based on Hexo version 1.10.0)
+- **Compatibility**: Hugo v0.53
 
-    - Named
-    {{< img-post path="date" file="filename.jpg" alt="Alt Text" type="left" >}}
+## Features
 
-    - Positional
-    {{< img-post "title" "filename.jpg" "Alt Text" "left" >}}
+**General features:**
 
-Please refer to the img-post shortcode file for more information on the parameters
+- Fully responsive
+- Optimized for tablets & mobiles
+- Configurable menu of the sidebar
+- Pages to filter tags, categories and archives
+- Background cover image
+- Beautiful about page
+- Support Open Graph protocol
+- Easily customizable (fonts, colors, layout elements, code coloration, etc..)
+- Support internationalization (i18)
 
-### Multiple Image Post
-img-fit: allows user to insert multiple images with the ability to create a gallery if needed. The command is shown below and is positional only:
+**Posts features:**
 
-    {{< img-fit
-        "4u" "pic04.jpg" "Alt text"
-        "4u" "pic05.jpg" "Alt text"
-        "4u$" "pic06.jpg" "Alt text"
-        "date" >}}
+- Thumbnail image
+- Cover image
+- Responsive videos & images
+- Sharing options
+- Navigation menu
+- GitHub theme for code highlighting (customizable)
+- Image gallery
+- Tags for images (FancyBox), wide images, tabbed code blocks, highlighted text, alerts
+- Table of contents
 
-Please refer to the img-fist shortcode file for more information on the parameters
+**Integrated services:**
 
+- Disqus
+- Google analytics
+- Gravatar
+- Facebook Insights
 
-### URL link
-url-link: create a hyperlink and add a target value to the link. _blank will be used by default if a target value is not set. The shortcode is positional only.
+### Missing features from original *Hexo* version
 
-    {{< url-link "Hugo" "http://gohugo.io/" >}}
+- [ ] Baidu analytics
+- [ ] Algolia (https://github.com/kakawait/hugo-tranquilpeak-theme/issues/8)
+- [ ] Pagination customization `tagPagination`, `categoryPagination` and `archivePagination` (https://github.com/kakawait/hugo-tranquilpeak-theme/issues/17)
 
-Position 0 will be the link text. 1 will be the url and the last position will be value of the target attribute.
+**ATTENTION** following features will not be possible due to *Hugo* limitations
 
-## View the theme on Hugo's built-in server
+- Archives pages by years `/archives/2015`
+- Archives pages by month `/archives/2015/01`
 
-Run the following command to view the content of the website:
+## Quick start
 
-    hugo server
+**Please read [user documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md), it's short and useful to discover all features and possibilities of the theme, especially the  [writing posts](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#writing-posts) section**
 
-You can now view the website at the following link, [localhost:1313](http://localhost:1313)
+### For people who want to use the original version of Tranquilpeak without modifications (users)
 
-## About the Author
+Go to the directory where you have your Hugo site and run:
 
-Hugo Future Imperfect was ported and it's extra features were implemented by [Julio Pescador](https://jpescador.com)
+```shell
+mkdir themes
+cd themes
+git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git
+```
 
-Send me a [tweet](https://twitter.com/julio_pescador), @julio_pescador, if you like the theme and are using it for your own personal use.
+After installing the Tranquilpeak theme successfully, we recommend you to take a look at the [exampleSite](exampleSite) directory. You will find a working Hugo site configured with the Tranquilpeak theme that you can use as a starting point for your site.
+
+First, let's take a look at the [config.toml](exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
+
+More information on [user documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md) to install and configure the theme
+
+### For people who want to create their own version of tranquilpeak (developers)
+
+1. Run `git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git`
+2. Follow [developer documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/developer.md) to edit and build the theme
+
+## Demo
+
+Check out Tranquilpeak theme in live : [hugo-tranquilpeak-theme demo](https://tranquilpeak.kakawait.com)
+
+## Showcase
+
+Checkout showcase https://tranquilpeak.kakawait.com/2015/06/who-is-using-tranquilpeak-hugo-theme/
+
+### How can I add my site to the showcase
+
+**Click [here](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/new?title=Add%20my%20blog%20into%20the%20showcase&body=Hey,%20add%20my%20blog%20into%20the%20showcase:) to add your blog into the showcase.**
+
+Please fill the following information:
+
+1. public url
+2. name (optional)
+3. description (optional)
+
+## Documentation
+
+If it's your first time using Hugo, please check [Hugo official documentation](https://gohugo.io/overview/introduction/)
+
+### For users
+
+To install and configure the theme, consult the following documentation : [user documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md)
+
+### For developers
+
+To understand the code, the workflow and edit the theme, consult the following documentation : [developer documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/developer.md)
+
+## Contributing
+
+All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
+
+Read [guidelines for contributing](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/.github/CONTRIBUTING.md) for more information.
+
+As explained on [Credits](#credits):
+
+> *Hugo* version keeps every `.js` and `.css` files untouched from original *Hexo* version in order to enjoy future original *Hexo* version updates or features!
+
+That mean I would keep a strong dependency with original *Hexo* theme. Thus if you want to suggest any modifications on `.css` or `.js` files **I will submit those changes to original *Hexo* theme** (except if it's really specific to *Hugo* bugs that is not present on *Hexo*).
 
 ## License
 
-This theme is released under the MIT license. Please read the [license](https://github.com/jpescador/hugo-future-imperfect/blob/master/LICENSE.md) for more information.
+hugo-tranquilpeak-theme is released under the terms of the [GNU General Public License v3.0](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/LICENSE).
+

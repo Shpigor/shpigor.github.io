@@ -1,22 +1,22 @@
-{{ partial "general-title" . }}
-
-{{ partial "header" . }}
-    {{ partial "navbar" . }}
-    <!-- Main -->
-    <div id="main">
-        <!-- Please note that the param orderByPublishDate is no longer being used
-             since the pagination is not what is expected. Use at your own risk! -->
-        {{ if .Site.Params.orderByPublishDate }}
-            {{ $paginator := .Paginate (where .Data.Pages.ByPublishDate.Reverse "Type" "post") }}
-        {{ else }}
-            {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-        {{ end }}
-
-        {{ range .Paginator.Pages }}
-            {{ .Render "content-list" }}
-        {{ end }}
-
-        {{ partial "pagination" . }}
+{{ partial "head.html" . }}
+  <body>
+    <div id="blog">
+      {{ partial "header.html" . }}
+      {{ partial "sidebar.html" . }}
+      {{ partial "post/header-cover.html" . }}
+      <div id="main" data-behavior="{{ .Scratch.Get "sidebarBehavior" }}"
+        class="{{ with .Params.coverimage }}hasCover{{ end }}
+               {{ if eq .Params.covermeta "out" }}hasCoverMetaOut{{ else }}hasCoverMetaIn{{ end }}
+               {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
+        <section class="postShorten-group main-content-wrap">
+          {{/* Iterate only over pages of the same type as this section. */}}
+          {{ $paginator := .Paginate (where .Data.Pages "Type" .Type) }}
+          {{ range $paginator.Pages }}
+            {{ .Render "summary" }}
+          {{ end }}
+          {{ partial "pagination.html" . }}
+        </section>
+        {{ partial "footer.html" . }}
+      </div>
     </div>
-    {{ partial "sidebar" . }}
-{{ partial "footer" . }}
+{{ partial "foot.html" . }}
